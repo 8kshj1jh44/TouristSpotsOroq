@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #fbfbfa;
+  --surface-card: #ffffff;
+  --text-primary: #121814;
+  --text-muted: #58635c;
+  --primary: #1a4d2e;
+  --primary-hover: #133a22;
+  --accent-warm: #e8aa42;
+  --accent-soft: #e8efe9;
+  --border-subtle: #e5e9e6;
+}
+
+@theme inline {
+  --color-canvas: var(--bg-canvas);
+  --color-card: var(--surface-card);
+  --color-forest: var(--primary);
+  --color-forest-dark: var(--primary-hover);
+  --color-sand: var(--accent-warm);
+  --color-sage: var(--accent-soft);
+  --color-ink: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* StarBorder primary CTA — theme-matched inner pill */
+.star-border-cta .inner-content {
+  background: var(--primary);
+  border-color: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+}
+.star-border-cta:hover .inner-content {
+  background: var(--primary-hover);
+}

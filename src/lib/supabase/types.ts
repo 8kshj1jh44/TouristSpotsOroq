@@ -1,0 +1,22 @@
+export type Spot = {
+  id: string;
+  created_at: string;
+  name: string;
+  slug: string;
+  category: string;
+  tagline: string | null;
+  description: string | null;
+  barangay: string;
+  address: string;
+  opening_hours: string;
+  is_open_daily: boolean;
+  phone: string | null;
+  email: string | null;
+  website_url: string | null;
+  social_handle: string | null;
+  map_url: string | null;
+  followers_count: string | null;
+  featured_image: string | null;
+  gallery: string[];
+  is_featured: boolean;
+};
