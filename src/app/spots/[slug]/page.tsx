@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Logo from "@/components/Logo";
 import SpotImage from "@/components/SpotImage";
+import SpecularButton from "@/components/ui/SpecularButton";
 import { getSpotBySlug } from "@/lib/supabase/queries";
 
 export const dynamic = "force-dynamic";
@@ -235,17 +236,36 @@ export default async function SpotPage({ params }: { params: Promise<{ slug: str
             )}
 
             {spot.map_url && (
-              <a
-                href={spot.map_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-forest px-5 py-3 text-sm font-semibold text-forest transition-colors hover:bg-sage/40 active:scale-[0.98]"
-              >
-                <MapPin className="h-4 w-4" strokeWidth={1.5} />
-                Get directions
-              </a>
+              <div className="mt-3">
+                <SpecularButton
+                  href={spot.map_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  size="md"
+                  radius={999}
+                  tint="#1A4D2E"
+                  tintOpacity={1}
+                  blur={0}
+                  textColor="#ffffff"
+                  lineColor="#E8AA42"
+                  baseColor="#0f3d22"
+                  intensity={1.2}
+                  shineSize={10}
+                  shineFade={40}
+                  thickness={2}
+                  followMouse
+                  proximity={300}
+                  autoAnimate
+                  className="specular-button--block"
+                >
+                  <span className="inline-flex items-center gap-2">
+                    <MapPin className="h-4 w-4" strokeWidth={1.5} />
+                    Get directions
+                  </span>
+                </SpecularButton>
+              </div>
             )}
-          </aside>
+            </aside>
         </div>
       </main>
 
