@@ -28,7 +28,8 @@ update public.spots
 set name = 'Sebucal Hot Spring',
     slug = 'sebucal-hot-spring',
     tagline = 'Sink into warm mineral waters and let the day melt away.',
-    featured_image = '/hotspring.jfif'
+    featured_image = '/hotspring.jfif',
+    barangay = 'brgy. Sebucal'
 where slug = 'hot-spring';
 
 -- Costa Del Sol -> Costa del Sol Resort Hotel (add name, tagline, description)

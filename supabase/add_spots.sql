@@ -102,7 +102,7 @@ insert into public.spots (
   'Hot Spring & Wellness',
   'Sink into warm mineral waters and let the day melt away.',
   NULL,
-  'Placeholder Barangay',
+  'brgy. Sebucal',
   'Oroquieta City, Misamis Occidental, Philippines',
   '6:00 AM - 8:00 PM',
   NULL, NULL, NULL, NULL, false,
